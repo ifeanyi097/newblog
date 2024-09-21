@@ -1,0 +1,216 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6347; /* Add hover effect for better user experience */
+}
+
+nav .menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav .menu-toggle {
+    display: inline-block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: url('bg.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+  background-color: #ff6347;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn:hover {
+  background-color: #ff4500;
+}
+
+/* Search Bar */
+.search-bar {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-bar form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 20px 0 0 20px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: 2px solid #333;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #444;
+}
+
+/* Blog Content */
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content img, .content video {
+  max-width: 100%;
+  height: auto;
+}
+
+.like-comment-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.like-comment-section button {
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.like-comment-section a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-section input[type="text"],
+.comment-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comment-section button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (min-width: 769px) {
+  nav {
+    padding: 10px 40px; /* Add extra padding for better spacing on larger screens */
+  }
+
+  nav ul {
+    flex: 1;
+    justify-content: flex-end; /* Align nav items to the right */
+  }
+
+  nav ul li {
+    padding: 10px 30px; /* More spacing between navigation items */
+  }
+
+  nav ul li a {
+    font-size: 18px; /* Slightly larger font for large screens */
+  }
+}
