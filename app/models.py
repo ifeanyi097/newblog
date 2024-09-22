@@ -9,7 +9,7 @@ class Content(models.Model):
 
 class Gallery(models.Model):
     content = models.ForeignKey(Content, on_delete=models.CASCADE)
-    file = models.FieleField(upload_to='files')
+    file = models.FileField(upload_to='files')
 
     def __str__(self):
         return f'file for content -{self.content.pk}'
