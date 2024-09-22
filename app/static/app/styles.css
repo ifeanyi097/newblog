@@ -8,7 +8,6 @@ body, html {
 nav {
   background-color: #333;
   padding: 10px 20px;
-  position: fixed;
   width: 100%;
   z-index: 100;
   display: flex;
@@ -73,7 +72,7 @@ nav .menu-toggle {
 /* Hero Section */
 .hero {
   background: url('bg.jpg') no-repeat center center/cover;
-  height: 60vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
